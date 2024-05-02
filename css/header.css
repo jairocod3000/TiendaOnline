@@ -1,0 +1,66 @@
+/* Estilos de elementos del header*/
+
+header .logo{
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+header .logo:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: var(--transition-time);
+}
+
+header .fa-user, header .fa-shopping-cart, header .fa-circle-half-stroke{
+    scale: 4;
+    color: var(--text-color);
+}
+
+header .login_cart{
+    grid-area: 1 / 9 / 2 / 12; 
+
+    display: flex;
+    gap: 10rem;
+    place-items: center;
+}
+
+header .fa-user:hover, .fa-shopping-cart:hover, header .fa-circle-half-stroke:hover{
+    color: var(--hover-color);
+    transition: var(--transition-time);
+    cursor: pointer;
+    scale: 5;
+}
+
+header > nav{
+    grid-area: 1 / 6 / 2 / 7; 
+}
+
+ul.menu{
+    display: flex;
+
+    gap: 3em;
+    font-size: 2rem;
+    font-family: var(--title-font);
+    padding: 0;
+}
+
+ul.menu li{
+    list-style: none;
+}
+
+ul.menu li a{
+    text-decoration: none;
+    font-weight: var(--title-font-weight);
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+ul.menu li a:hover{
+    background-color: var(--hover-color);
+    transition: var(--transition-time);
+    color: var(--background-color);
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: var(--box-shadow);
+}

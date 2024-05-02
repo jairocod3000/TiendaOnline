@@ -1,0 +1,122 @@
+/* Estilos para los formularios tanto del Inicio de Sesión como al Registrarse */
+
+#login_signup{
+    grid-column: 1 / -1;
+    grid-row: 10 / 64;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.login--container { 
+    grid-area: 1 / 1 / 2 / 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--hover-color);
+}
+
+.login--container h1, 
+.signup--container h1, 
+.product--info h1, 
+.banner--text h1,
+#products h1{
+    text-align: center;
+}
+
+.login--container a, .signup--container p, .signup--container a{
+    font-size: 2rem;
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 0;
+    text-decoration: none;
+}
+
+.login--container a:hover, .signup--container a:hover{
+    color: var(--hover-color);
+    transition: var(--transition-time);
+    cursor: pointer;
+}
+
+.signup--container { 
+    grid-area: 1 / 2 / 2 / 3; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup--container h1, 
+.signup--container a, 
+.signup--container p{
+    opacity: 0.3;
+}
+
+.signup--container p{
+    padding-bottom: 2rem;
+}
+
+.signup--container p#signup--message, .login--container p#login--message, .login--container p#login--error,#NL--message{
+    font-size: 2.2rem;
+    font-weight: var(--title-font-weight);
+    color: var(--text-color);
+    background-color: lightgreen;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    display: none;
+}
+
+.login--container p#login--error{
+    background-color: var(--hover-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+form input:focus{
+    outline: none;
+    border: 1px solid var(--hover-color);
+}
+
+input[type="email"]:valid, input[type="password"]:valid, input[type="tel"]:valid, input[pattern="^[0-9]{16}$"]:valid{
+    border: 2px solid green;
+}
+
+input[type="email"]:invalid, input[type="password"]:invalid, input[type="tel"]:invalid, input[pattern="^[0-9]{16}$"]:invalid{
+    border: 2px solid var(--button-color);
+}
+
+input:disabled{
+    background-color: lightgray;
+    opacity: 0.3;
+}
+
+form button {
+    font-size: 2.2rem;
+    font-weight: var(--title-font-weight);
+    color: var(--background-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2rem 3rem;
+    margin-top: 1rem;
+}
+
+.signup--container button{
+    opacity: 0.3;
+}
+
+form button:hover{
+    background-color: var(--hover-color);
+    transition: var(--transition-time);
+    cursor: pointer;
+}

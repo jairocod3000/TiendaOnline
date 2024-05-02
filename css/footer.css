@@ -1,0 +1,49 @@
+/* Estilos para el footer */
+
+footer{
+    grid-column: 1 / -1;
+    grid-row: 54 / 70;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+
+footer a{
+    font-size: 2rem;
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    padding-bottom: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--hover-color);
+    transition: var(--transition-time);
+    cursor: pointer;
+}
+
+footer i{
+    font-size: 3rem;
+    color: var(--text-color);
+    padding: 0 1rem;
+}
+
+footer ul{
+    list-style: none;
+}
+
+.help, .about_us, .legal, .payment_methods, .social_media_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.payment_methods ul, .social_media_footer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+}
